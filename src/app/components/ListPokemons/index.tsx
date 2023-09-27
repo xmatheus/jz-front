@@ -9,6 +9,12 @@ interface ListPokemonsProps {
   pokemons: PokemonsData[];
 }
 
+const typeClassMap: Record<string, string> = {
+  pikachu: "type-pikachu",
+  mewtwo: "type-mewtwo",
+  charizard: "type-charizard",
+};
+
 const ListPokemons: React.FC<ListPokemonsProps> = ({
   pokemons,
   setPokemons,
@@ -27,9 +33,7 @@ const ListPokemons: React.FC<ListPokemonsProps> = ({
 
   async function handleDelete(id: number) {
     try {
-      await axios.delete(
-        `http://localhost:3001/pokemons/${id}`
-      );
+      await axios.delete(`http://localhost:3001/pokemons/${id}`);
       setPokemons((prevPokemons) => [
         ...prevPokemons.filter((item) => item.id !== id),
       ]);
@@ -41,7 +45,8 @@ const ListPokemons: React.FC<ListPokemonsProps> = ({
       {pokemons.map((item) => (
         <div key={item.id} className="list-item">
           <p className="item-id">ID: {item.id}</p>
-          <p className="item-treinador">Treinador: {item.treinador}</p>
+          <p className={`item-tipo ${typeClassMap[item.tipo]}`}>{item.tipo} </p>
+          <p className="item-treinador">{item.treinador}</p>
           <button
             className="delete-button"
             onClick={() => handleDelete(item.id)}

@@ -25,6 +25,28 @@
   align-items: center;
 }
 
+.item-tipo {
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.type-pikachu {
+  background-color: #ffcc00; /* Cor de fundo específica para Pikachu */
+  color: #000; /* Cor do texto específica para Pikachu */
+}
+
+/* Estilo do tipo Mewtwo */
+.type-mewtwo {
+  background-color: #7513c6; /* Cor de fundo específica para Mewtwo */
+  color: #fff; /* Cor do texto específica para Mewtwo */
+}
+
+/* Estilo do tipo Charizard */
+.type-charizard {
+  background-color: #f16d24; /* Cor de fundo específica para Charizard */
+  color: #fff; /* Cor do texto específica para Charizard */
+}
+
 .list-item .item-id {
   font-weight: bold;
   color: #555;
@@ -32,7 +54,7 @@
 
 .list-item .item-treinador {
   color: #333;
-  width: 60%;
+  width: 30%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

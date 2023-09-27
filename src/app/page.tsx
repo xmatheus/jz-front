@@ -7,7 +7,7 @@ import ListPokemons from "./components/ListPokemons";
 type PokemonType = "charizard" | "mewtwo" | "pikachu";
 
 export interface PokemonsData {
-  tipo?: PokemonType;
+  tipo: PokemonType;
   treinador?: string;
   id: number,
   nivel?: number
