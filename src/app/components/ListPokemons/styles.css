@@ -1,5 +1,3 @@
-/* styles.css */
-
 #list-container {
   margin: 0 auto;
   width: 100%;
@@ -31,20 +29,18 @@
 }
 
 .type-pikachu {
-  background-color: #ffcc00; /* Cor de fundo específica para Pikachu */
-  color: #000; /* Cor do texto específica para Pikachu */
+  background-color: #ffcc00;
+  color: #000;
 }
 
-/* Estilo do tipo Mewtwo */
 .type-mewtwo {
-  background-color: #7513c6; /* Cor de fundo específica para Mewtwo */
-  color: #fff; /* Cor do texto específica para Mewtwo */
+  background-color: #7513c6;
+  color: #fff;
 }
 
-/* Estilo do tipo Charizard */
 .type-charizard {
-  background-color: #f16d24; /* Cor de fundo específica para Charizard */
-  color: #fff; /* Cor do texto específica para Charizard */
+  background-color: #f16d24;
+  color: #fff;
 }
 
 .list-item .item-id {

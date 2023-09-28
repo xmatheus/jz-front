@@ -3,7 +3,6 @@ import "./styles.css";
 import { PokemonsData } from "../../page";
 import axios from "axios";
 
-// Defina uma interface para as props do componente CreatePokemons
 interface ListPokemonsProps {
   setPokemons: React.Dispatch<React.SetStateAction<PokemonsData[]>>;
   pokemons: PokemonsData[];
@@ -26,7 +25,6 @@ const ListPokemons: React.FC<ListPokemonsProps> = ({
   async function getPokemons() {
     try {
       const response = await axios.get("http://localhost:3001/pokemons");
-      console.log(response.data);
       setPokemons((prevPokemons) => [...prevPokemons, ...response.data]);
     } catch (error) {}
   }
